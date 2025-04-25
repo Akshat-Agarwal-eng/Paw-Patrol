@@ -1,0 +1,136 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.siren {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.alert-badge {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .alert-badge {
+      top: 70px;
+      right: 10px;
+      left: 10px;
+      width: calc(100% - 20px);
+  }
+
+  #imagePreview {
+      max-height: 200px;
+  }
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.loading {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.loading div {
+  position: absolute;
+  border: 4px solid #FF6B6B;
+  opacity: 1;
+  border-radius: 50%;
+  animation: loading 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.loading div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes loading {
+  0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+  }
+  100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+  }
+}
+
+.paw-marker {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-10px);
+  }
+}
+
+.tracking-panel {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.tracking-timeline .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.tracking-timeline .line {
+  width: 2px;
+  background-color: #e0e0e0;
+}
+
+.tracking-timeline .active .dot {
+  background-color: #FF6B6B;
+}
+
+.tracking-timeline .active .line {
+  background-color: #FF6B6B;
+}
+
+.tracking-timeline .pending .dot {
+  background-color: #e0e0e0;
+}
